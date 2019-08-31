@@ -6,5 +6,7 @@ module.exports = app => {
           console.log(`NTask API - porta ${app.set("port")}`)
         });
       });
+  }else{
+    app.db.sequelize.sync({ logging: false })
   }
 }

@@ -4,7 +4,7 @@ module.exports = app => {
   const cfg = app.libs.config;
   const Users = app.db.models.Users;
 
-  app.post("/toke", (req, res) => {
+  app.post("/token", (req, res) => {
     if ( req.body.email && req.body.password ) {
       const email = req.body.email;
       const password = req.body.passord;
@@ -13,9 +13,8 @@ module.exports = app => {
         .then(user => {
           if( Users.isPassword(user.password, password)){
             const payload = { id: user.id };
-            res.json({
-              token: jwt.encode(payload, cfg.jwtSecret)
-            })
+            const result  = { token: jwt.encode(payload, cfg.jwtSecret) };
+            res.json(result)
           } else {
             res.sendStatus(401);
           }
