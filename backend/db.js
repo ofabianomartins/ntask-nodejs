@@ -4,14 +4,14 @@ import Sequelize from "sequelize";
 import sequelizeLogger from 'sequelize-log-syntax-colors';
 // require config
 
-const config = require("./libs/configs.js");
 
-config.logging = sequelizeLogger;
 
 let db = null;
 
 module.exports = app => {
   if (!db) {
+    const config = app.libs.config;
+
     const sequelize = new Sequelize(
       config.database,
       config.username,

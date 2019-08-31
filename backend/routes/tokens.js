@@ -14,7 +14,7 @@ module.exports = app => {
           if( Users.isPassword(user.password, password)){
             const payload = { id: user.id };
             res.json({
-              token: jwt.encode(payload, cfg.jwtSecret);
+              token: jwt.encode(payload, cfg.jwtSecret)
             })
           } else {
             res.sendStatus(401);
