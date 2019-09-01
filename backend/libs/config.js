@@ -1,3 +1,5 @@
+import logger from "./logger.js";
+
 const envs = {
   development: {
     database: "ntask_development",
@@ -5,9 +7,9 @@ const envs = {
     password: "ntask",
     params: {
       dialect: "postgres",
-      logging: true,
-      underscored: true,
-      underscoredAll: true,
+      logging: (sql) => {
+        logger.info(`[${new Date()}] ${sql}`)
+      },
       snake_case: true
     },
     jwtSecret: "Nta$K-AP1",

@@ -22,15 +22,18 @@
     "bcrypt": "^3.0.6",
     "body-parser": "1.15.0",
     "consign": "^0.1.6",
+    "cors": "2.7.1",
     "express": "4.13.4",
     "jwt-simple": "0.4.1",
+    "morgan": "1.6.1",
     "nodemon": "^1.19.1",
     "passport": "0.3.2",
     "passport-jwt": "2.0.0",
     "pg": "6.4.2",
     "pg-hstore": "^2.3.3",
     "sequelize": "3.19.2",
-    "sequelize-log-syntax-colors": "^2.0.0"
+    "sequelize-log-syntax-colors": "^2.0.0",
+    "winston": "2.1.1"
   },
   "devDependencies": {
     "apidoc": "0.15.1",

@@ -691,6 +691,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+basic-auth@~1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-1.0.4.tgz#030935b01de7c9b94a824b29f3fccb750d3a5290"
+  integrity sha1-Awk1sB3nyblKgksp8/zLdQ06UpA=
+
 bcrypt@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-3.0.6.tgz#f607846df62d27e60d5e795612c4f67d70206eb2"
@@ -1064,6 +1069,13 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+cors@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/cors/-/cors-2.7.1.tgz#3c2e50a58af9ef8c89bee21226b099be1f02739b"
+  integrity sha1-PC5QpYr574yJvuISJrCZvh8Cc5s=
+  dependencies:
+    vary "^1"
+
 create-error-class@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
@@ -1169,6 +1181,11 @@ depd@^1.0.0, depd@~1.1.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
+
+depd@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/depd/-/depd-1.0.1.tgz#80aec64c9d6d97e65cc2a9caa93c0aa6abf73aaa"
+  integrity sha1-gK7GTJ1tl+ZcwqnKqTwKpqv3Oqo=
 
 destroy@~1.0.4:
   version "1.0.4"
@@ -2379,6 +2396,17 @@ moment-timezone@^0.5.0:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
+morgan@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.6.1.tgz#5fd818398c6819cba28a7cd6664f292fe1c0bbf2"
+  integrity sha1-X9gYOYxoGcuiinzWZk8pL+HAu/I=
+  dependencies:
+    basic-auth "~1.0.3"
+    debug "~2.2.0"
+    depd "~1.0.1"
+    on-finished "~2.3.0"
+    on-headers "~1.0.0"
+
 ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
@@ -2594,6 +2622,11 @@ on-finished@~2.3.0:
   integrity sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=
   dependencies:
     ee-first "1.1.1"
+
+on-headers@~1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
+  integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
 
 once@^1.3.0:
   version "1.4.0"
@@ -3687,6 +3720,11 @@ validator@^4.6.1:
   dependencies:
     depd "1.1.0"
 
+vary@^1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
+  integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
 vary@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.0.1.tgz#99e4981566a286118dfb2b817357df7993376d10"
@@ -3721,7 +3759,7 @@ widest-line@^2.0.0:
   dependencies:
     string-width "^2.1.1"
 
-winston@~2.1.1:
+winston@2.1.1, winston@~2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/winston/-/winston-2.1.1.tgz#3c9349d196207fd1bdff9d4bc43ef72510e3a12e"
   integrity sha1-PJNJ0ZYgf9G9/51LxD73JRDjoS4=
