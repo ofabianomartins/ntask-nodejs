@@ -1,5 +1,11 @@
+import jwt from "jwt-simple";
+
 describe("Routes: Token", () => {
   const Users = app.db.models.Users;
+  const jwtSecret = app.libs.config.jwtSecret;
+
+  let token;
+
   describe("POST /token", () => {
     beforeEach(done => {
       Users
@@ -9,19 +15,20 @@ describe("Routes: Token", () => {
           email: "john@mail.net",
           password: "12345"
         }))
-        .then(() => done());
+        .then(user => {
+          token = jwt.encode({ id: user.id }, jwtSecret);
+          done();
+        });
     });
 
     describe("status 200", () => {
       it("returns authenticated user token", done => {
         request.post("/token")
-          .send({
-            email: "john@mail.net",
-            password: "12345"
-          })
+          .send({ email: "john@mail.net", password: "12345" })
           .expect(200)
-          .end((end, res) => {
+          .end((err, res) => {
             expect(res.body).to.include.keys("token");
+            expect(res.body.token).to.eql(token);
             done(err);
           })
       })

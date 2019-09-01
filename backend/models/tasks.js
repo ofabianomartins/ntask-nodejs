@@ -13,14 +13,14 @@ module.exports = (sequelize, DataType) => {
       }
     },
     done: {
-      type: DataType.STRING,
+      type: DataType.BOOLEAN,
       allowNull: false,
       defaultValue: false
     }
   }, {
     classMethods: {
       associate: (models) => {
-        Tasks.belongsTo(models.Users)
+        Tasks.belongsTo(models.Users, { foreignKey: 'user_id' })
       }
     }
   });

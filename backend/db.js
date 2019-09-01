@@ -1,10 +1,6 @@
 import fs from "fs";
 import path from "path";
 import Sequelize from "sequelize";
-import sequelizeLogger from 'sequelize-log-syntax-colors';
-// require config
-
-
 
 let db = null;
 

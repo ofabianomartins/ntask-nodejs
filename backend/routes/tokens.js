@@ -7,7 +7,7 @@ module.exports = app => {
   app.post("/token", (req, res) => {
     if ( req.body.email && req.body.password ) {
       const email = req.body.email;
-      const password = req.body.passord;
+      const password = req.body.password;
 
       Users.findOne({ where: { email: email }})
         .then(user => {
@@ -24,5 +24,4 @@ module.exports = app => {
       res.sendStatus(401);
     }
   });
-
 }

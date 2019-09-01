@@ -5,7 +5,10 @@ const envs = {
     password: "ntask",
     params: {
       dialect: "postgres",
-      logging: true
+      logging: true,
+      underscored: true,
+      underscoredAll: true,
+      snake_case: true
     },
     jwtSecret: "Nta$K-AP1",
     jwtSession: { session: false }
@@ -16,7 +19,10 @@ const envs = {
     password: "ntask",
     params: {
       dialect: "postgres",
-      logging: false
+      logging: false,
+      underscored: true,
+      underscoredAll: true,
+      snake_case: true
     },
     jwtSecret: "NTASK_TEST",
     jwtSession: { session: false }
