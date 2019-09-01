@@ -4,7 +4,8 @@
   "description": "A educational project",
   "main": "index.js",
   "scripts": {
-    "start": "yarn apidoc && babel-node index.js",
+    "start": "yarn apidoc && yarn clusters",
+    "clusters": "babel-node clusters.js",
     "apidoc": "apidoc -i routes/ -o public/apidoc",
     "test": "NODE_ENV=test mocha test/**/*.js"
   },
