@@ -34,7 +34,7 @@
     "passport-jwt": "2.0.0",
     "pg": "6.4.2",
     "pg-hstore": "^2.3.3",
-    "sequelize": "3.19.2",
+    "sequelize": "5.15.1",
     "sequelize-log-syntax-colors": "^2.0.0",
     "winston": "2.1.1"
   },
